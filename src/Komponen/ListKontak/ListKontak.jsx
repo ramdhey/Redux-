@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { getListKontak } from "../../actions/kontakAction";
+import Card from 'react-bootstrap/Card';
 
 const ListKontak = () => {
 
@@ -20,7 +21,26 @@ const ListKontak = () => {
             {getListKontakResult ? (
                 getListKontakResult.map((contact)=>{
                     return(
-                        <p key={contact.id}>{contact.nama}-{contact.nohp}</p>
+                        <Card className='cardnya mb-5' style={{ width: '18rem', backgroundImage: 'linear-gradient(to left,#F6BE00,#F2BB66,#2E8B57)', margin: 'auto', borderRadius: '15px' }} >
+                            <Card.Body key={contact.id} >
+                                
+                                <Card.Text key={contact.id} className='NoTelephone'> I D : 
+                                {' '} {contact.id}
+                                </Card.Text>
+                                <Card.Title className='Nama' >Nama : {contact.nama}</Card.Title>
+                                <Card.Text className='NoTelephone'>
+                                {contact.nohp}
+                                </Card.Text>
+                                
+                                
+                            
+
+                            </Card.Body>
+                        </Card>
+                            
+                       
+
+                        
                     )
                 })
             ):getListKontakLoading ?(
