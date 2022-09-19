@@ -19,15 +19,15 @@ const ListKontak = () => {
     return(
         <div>
             {getListKontakResult ? (
-                getListKontakResult.map((contact)=>{
+                getListKontakResult.map((kontak)=>{
                     return(
                         <Card className='cardnya mb-5' style={{ width: '18rem', backgroundImage: 'linear-gradient(to left,#F6BE00,#F2BB66,#2E8B57)', margin: 'auto', borderRadius: '15px' }} >
-                            <Card.Body key={contact.id} >
+                            <Card.Body key={kontak.id} >
                                 
-                                <Card.Text key={contact.id} className='NoTelephone'> I D : 
-                                {' '} {contact.id}
+                                <Card.Text key={kontak.id} className='NoTelephone'> I D : 
+                                {' '} {kontak.id}
                                 </Card.Text>
-                                <Card.Title className='Nama' >Nama : {contact.nama}</Card.Title>
+                                <Card.Title className='Nama' >Nama : {kontak.nama}</Card.Title>
                                 <Card.Text className='NoTelephone'>
                                 {contact.nohp}
                                 </Card.Text>
