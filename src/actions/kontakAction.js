@@ -21,7 +21,7 @@ export const getListKontak = () => {
         //get API
         axios({
             method:'GET',
-            url: 'http://localhost:3000/contact',
+            url: 'http://localhost:2022/kontak',
             timeout: 100000
         }).then((response)=>{
             //jika sukses dijalankan
