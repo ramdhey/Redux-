@@ -29,7 +29,7 @@ const ListKontak = () => {
                                 </Card.Text>
                                 <Card.Title className='Nama' >Nama : {kontak.nama}</Card.Title>
                                 <Card.Text className='NoTelephone'>
-                                {contact.nohp}
+                                {kontak.nohp}
                                 </Card.Text>
                                 
                                 
