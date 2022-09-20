@@ -21,7 +21,7 @@ export const getListKontak = () => {
         //get API
         axios({
             method:'GET',
-            url: 'http://localhost:2022/kontak',
+            url: 'https://kontakjson.herokuapp.com/kontak',
             timeout: 100000
         }).then((response)=>{
             //jika sukses dijalankan
